@@ -12,11 +12,11 @@ public class Exer_1 {
 
 	public static void main(String[] args) {
 		
-		System.out.println("Introduce un número");
+		System.out.println("Introduce un nï¿½mero");
 		
 		Scanner sc = new Scanner(System.in);
 		int numero = sc.nextInt();
-		
+		sc.close();
 		numero = solution(numero);
 		
 		
