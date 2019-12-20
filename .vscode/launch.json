@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Exer_3",
+            "request": "launch",
+            "mainClass": "Exer_3",
+            "projectName": "Solutions"
+        }
+    ]
+}
