@@ -1,40 +1,31 @@
-import java.util.Vector;
-
 public class Exer_4 {
+    public static void main(String[] args) {
 
-public static void main(String[] args) {
-sortDesc(2356435);
-}
-public static int sortDesc(final int num) {
-   //int  numero = 12345;
+        boolean resultado = getXO("zzoo");
 
-   String sNumero =  Integer.toString(num);
-   char aux;
-   char menor='9';
-   Vector<Character> resultado = new Vector<Character>();
-
-   for (int i=0; i<=sNumero.length()-1;i++) {
-       
-    
-    aux = sNumero.charAt(i);
-    //Creo un array con los numeros
-    resultado.add(aux);
-
-    //Ordenar array
-    
-
-    if (aux<=menor) {
-        menor = aux;
-        resultado.add(menor);
-    } else {
-        resultado.add(aux);
+        System.out.println(resultado);
     }
 
-    System.out.println(resultado);
-}
-
-
-    return 0;
-}
-
+    public static boolean getXO(String str) {
+        
+        String[] vCadena = str.split("");
+        int iX=0;
+        int iO=0;
+        
+        for (int i=0;i<=vCadena.length-1;i++) {
+            if ("o".equalsIgnoreCase(vCadena[i])) {
+                iO++;
+            } else if("x".equalsIgnoreCase(vCadena[i])) {
+                iX++;
+            }
+        }
+        
+        if (iX==iO) {
+            return true;
+        } else if(iX == 0 && iO == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
